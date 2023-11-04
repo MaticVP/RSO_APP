@@ -16,8 +16,8 @@ ARG JAR_FILE
 
 ENV LINUX_JAR_FILE=${JAR_FILE}
 
-ADD ./RSO-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build ./app/target/RSO-0.0.1-SNAPSHOT.jar /app
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar", "app.jar"]
+ENTRYPOINT ["java","-jar", "RSO-0.0.1-SNAPSHOT.jar"]
