@@ -16,7 +16,7 @@ ARG JAR_FILE
 
 ENV LINUX_JAR_FILE=${JAR_FILE}
 
-ADD ./target/RSO-0.0.1-SNAPSHOT.jar app.jar
+ADD ./RSO-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
