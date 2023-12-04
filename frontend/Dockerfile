@@ -1,4 +1,4 @@
-FROM maven:3.8.3-openjdk-17 AS build
+FROM node:17-alpine3.12 AS build
 
 COPY ./ /app
 
@@ -18,8 +18,8 @@ ENV LINUX_JAR_FILE=${JAR_FILE}
 
 ENV DB_URL=${JAR_FILE}
 
-COPY --from=build ./app/target/demo-0.0.1-SNAPSHOT.jar /app
+COPY COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
-ENTRYPOINT ["java","-jar", "demo-0.0.1-SNAPSHOT.jar"]
+CMD ["npm", "start"]

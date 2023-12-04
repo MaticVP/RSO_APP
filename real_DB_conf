@@ -1,0 +1,15 @@
+spring.datasource.url=jdbc:postgresql://batyr.db.elephantsql.com:5432/obauputb
+spring.datasource.username=obauputb
+spring.datasource.password=IyELRXpf5tGzTJhhojCSjUYFzXWOETNN
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+
+//Docker ver
+spring.datasource.url=jdbc:postgresql://postgres:5432/obauputb
+spring.datasource.username=obauputb
+spring.datasource.password=IyELRXpf5tGzTJhhojCSjUYFzXWOETNN
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=create-drop
+test.run.integration=False

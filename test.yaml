@@ -1,24 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: test
-  name: test
+  name: test-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test
-  strategy: {}
+      app: user-editor
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: test
+        app: user-editor
     spec:
       containers:
-      - image: pbsem2/new_image
-        name: new-image-9fm9v
-        resources: {}
-status: {}
+        - image: pbsem2/new_image
+          name: user-editor
+          env:
+            - name: SPRING_CONFIG_URI
+              value: jdbc:postgresql://batyr.db.elephantsql.com:5432/obauputb
+            - name: SPRING_CONFIG_USERNAME
+              value: obauputb
+            - name: SPRING_CONFIG_PASSWORD
+              value: IyELRXpf5tGzTJhhojCSjUYFzXWOETNN
+          ports:
+            - containerPort: 8080
+              name: server
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-editor
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: user-editor
