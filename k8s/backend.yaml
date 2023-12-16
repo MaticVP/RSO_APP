@@ -13,7 +13,7 @@ spec:
         app: user-editor
     spec:
       containers:
-        - image: pbsem2/new_image
+        - image: pbsem2/new_image:latest
           name: user-editor
           env:
             - name: SPRING_CONFIG_URI
@@ -33,7 +33,7 @@ kind: Service
 metadata:
   name: user-editor
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 8080
       protocol: TCP
