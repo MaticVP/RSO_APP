@@ -1,24 +1,18 @@
-FROM node:17-alpine3.12 AS build
-
-COPY ./ /app
+FROM node:16-alpine3.12
 
 WORKDIR /app
 
-RUN mvn --show-version --update-snapshots --batch-mode clean package
+ENV PATH /app/node_modules/.bin:$PATH
 
-FROM eclipse-temurin:17-jre-ubi9-minimal
+COPY package.json .
 
-RUN mkdir /app
+COPY package-lock.json .
 
-WORKDIR /app
+RUN npm install
+RUN npm install react-router-dom
+RUN npm install react-bootstrap bootstrap
 
-ARG JAR_FILE
-
-ENV LINUX_JAR_FILE=${JAR_FILE}
-
-ENV DB_URL=${JAR_FILE}
-
-COPY COPY . .
+COPY . .
 
 EXPOSE 3000
 

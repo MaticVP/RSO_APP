@@ -10,6 +10,6 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends CrudRepository<User, Integer> {
-    List<User> findByUsername(@Param("username") String username);
-
+    User findByUsername(@Param("username") String username);
+    List<User> removeByUsername(@Param("username") String username);
 }

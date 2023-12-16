@@ -14,6 +14,8 @@ public class User {
 
     private String password;
 
+    private String Profile_description;
+
     protected User() {}
 
     public User(String username, String password) {
@@ -42,6 +44,10 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public String getProfile_description() {return Profile_description;}
+
+    public void setProfile_description(String profile_description) {Profile_description = profile_description;}
 
 
 }

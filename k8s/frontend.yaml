@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: pbsem2/new_image:latest
+        - image: pbsem2/frontend_image:latest
           name: frontend
           ports:
             - containerPort: 3000
