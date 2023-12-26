@@ -11,6 +11,8 @@ COPY package-lock.json .
 RUN npm install
 RUN npm install react-router-dom
 RUN npm install react-bootstrap bootstrap
+RUN snpm install http-proxy-middleware
+RUN npm install axios
 
 COPY . .
 

@@ -14,13 +14,23 @@ public class User {
 
     private String password;
 
-    private String Profile_description;
+    private String profileDescription;
+
+    private String profile_path;
 
     protected User() {}
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.profile_path = null;
+    }
+
+    public User(String username, String password, String profile_description) {
+        this.username = username;
+        this.password = password;
+        this.profileDescription = profile_description;
+        this.profile_path = null;
     }
 
     @Override
@@ -45,9 +55,10 @@ public class User {
         this.username = username;
     }
 
-    public String getProfile_description() {return Profile_description;}
+    public String getProfileDescription() {return profileDescription;}
 
-    public void setProfile_description(String profile_description) {Profile_description = profile_description;}
+    public void setProfileDescription(String profileDescription) {
+        this.profileDescription = profileDescription;}
 
 
 }
