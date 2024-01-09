@@ -1,7 +1,11 @@
 package com.example.RSO.Service.Service;
 
+import com.dropbox.core.DbxException;
 import com.dropbox.core.v2.DbxClientV2;
 import com.dropbox.core.v2.files.FileMetadata;
+import com.example.RSO.Service.Controllers.UserController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +17,8 @@ public class DropboxService {
 
     @Autowired
     private DbxClientV2 dropboxClient;
+
+    Logger logger = LoggerFactory.getLogger(DropboxService.class);
 
     public void uploadFile(InputStream fileInputStream, String fileName, String user_name) {
         try
@@ -27,7 +33,7 @@ public class DropboxService {
                 }
                 // Handle metadata or any additional logic
             } catch(Exception e) {
-                e.printStackTrace();
+                logger.error(e.toString());
             }
         }
     }
@@ -50,10 +56,14 @@ public class DropboxService {
                 }
                 // Handle metadata or any additional logic
             } catch(Exception e) {
-                e.printStackTrace();
+                logger.error(e.toString());
             }
         }
         return new byte[0];
+    }
+
+    public void dropBoxPing() throws DbxException {
+        dropboxClient.files().listFolder("");
     }
 
     public byte[] getImage(String user_name,String project_name) {
@@ -74,7 +84,7 @@ public class DropboxService {
                 }
                 // Handle metadata or any additional logic
             } catch(Exception e) {
-                e.printStackTrace();
+                logger.error(e.toString());
             }
         }
         return new byte[0];
@@ -93,7 +103,7 @@ public class DropboxService {
                 }
                 // Handle metadata or any additional logic
             } catch(Exception e) {
-                e.printStackTrace();
+                logger.error(e.toString());
             }
         }
     }
@@ -105,7 +115,7 @@ public class DropboxService {
             }
             // Handle metadata or any additional logic
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.toString());
         }
     }
 

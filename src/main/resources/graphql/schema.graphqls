@@ -1,0 +1,11 @@
+type Query {
+    getUserByUsername(username: String!): User
+}
+
+type User {
+    id: ID
+    username: String
+    password: String
+    profileDescription: String
+    profile_path: String
+}

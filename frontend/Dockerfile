@@ -1,21 +1,32 @@
-FROM node:16-alpine3.12
+# Use the official Node.js runtime as the base image
+FROM node:16 as build
 
+# Set the working directory in the container
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
-
-COPY package.json .
-
-COPY package-lock.json .
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
 
 RUN npm install
 RUN npm install react-router-dom
 RUN npm install react-bootstrap bootstrap
-RUN snpm install http-proxy-middleware
+RUN npm install http-proxy-middleware
 RUN npm install axios
+RUN npm install react-konva konva
 
 COPY . .
 
-EXPOSE 3000
+# Build the React app for production
+RUN npm run build
 
-CMD ["npm", "start"]
+# Use Nginx as the production server
+FROM nginx:alpine
+
+# Copy the built React app to Nginx's web server directory
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80 for the Nginx server
+EXPOSE 80
+
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]

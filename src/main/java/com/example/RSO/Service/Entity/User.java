@@ -23,20 +23,28 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.profile_path = null;
+        this.profile_path = "/"+username;
     }
 
     public User(String username, String password, String profile_description) {
         this.username = username;
         this.password = password;
         this.profileDescription = profile_description;
-        this.profile_path = null;
+        this.profile_path = "/"+username;
     }
 
     @Override
     public String toString() {
         return String.format(
                 "User[id=%d, username='%s', password='%s']", id, username, password);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPassword() {
