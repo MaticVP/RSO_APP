@@ -74,7 +74,7 @@ function Projects() {
       };
 
       const handleDelete = async (e) => {
-        fetch('http://localhost:8081/api/draw/delete?project_name='+location.state.username+"&username="+location.state.username, { method: 'DELETE' })
+        fetch('/api/draw/delete?project_name='+location.state.username+"&username="+location.state.username, { method: 'DELETE' })
 
       }
 
