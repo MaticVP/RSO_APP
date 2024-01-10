@@ -1,26 +1,45 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pico
+  name: azure-pico
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/use-regex: "true"
+    ingress.kubernetes.io/rewrite-target: /$1
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
-          - path: /api
+          - path: /api/users
             pathType: Prefix
             backend:
               service:
                 name: user-editor
                 port:
-                  number: 8080
+                  number: 8082
+    - http:
+        paths:
+          - path: /api/draw
+            pathType: Prefix
+            backend:
+              service:
+                name: draw
+                port:
+                  number: 8081
+    #- http:
+    #    paths:
+    #      - path: /
+    #       pathType: Prefix
+    #        backend:
+    #          service:
+    #            name: config
+    #            port:
+    #              number: 8888
+    - http:
+        paths:
           - path: /
             pathType: Prefix
             backend:
               service:
                 name: frontend
                 port:
-                  number: 3000
+                  number: 80

@@ -1,60 +1,85 @@
-2024-01-10 17:07:16,959 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RsoApplication using Java 18.0.1.1 with PID 20068 (D:\delo\FRI\RSO-Project\RSO\target\classes started by matic in D:\delo\FRI\RSO-Project\RSO)
-2024-01-10 17:07:17,120 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "api"
-2024-01-10 17:07:17,171 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
-2024-01-10 17:07:17,175 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://localhost:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dropbox/default": Connection refused: no further information. Will be trying the next url if available
-2024-01-10 17:07:17,175 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@1a4af1bd uris = array<String>['http://localhost:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/dropbox/default": Connection refused: no further information
-2024-01-10 17:07:17,177 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
-2024-01-10 17:07:17,177 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=0674a15783b548b51934cb616104d079c314c058, state=null
-2024-01-10 17:07:17,177 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
-2024-01-10 17:07:17,177 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://localhost:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dropbox/api": Connection refused: no further information. Will be trying the next url if available
-2024-01-10 17:07:17,177 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@7f4dc34a uris = array<String>['http://localhost:8888/'], optional = true, profiles = 'api']): I/O error on GET request for "http://localhost:8888/dropbox/api": Connection refused: no further information
-2024-01-10 17:07:17,179 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
-2024-01-10 17:07:17,179 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://localhost:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dropbox/default": Connection refused: no further information. Will be trying the next url if available
-2024-01-10 17:07:17,179 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@fd29d51 uris = array<String>['http://localhost:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/dropbox/default": Connection refused: no further information
-2024-01-10 17:07:17,179 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
-2024-01-10 17:07:17,179 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=0674a15783b548b51934cb616104d079c314c058, state=null
-2024-01-10 17:07:17,183 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-01-10 17:07:17,183 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-01-10 17:07:18,841 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-10 17:07:19,019 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 169 ms. Found 1 JPA repository interface.
-2024-01-10 17:07:19,488 INFO o.s.c.c.s.GenericScope [restartedMain] BeanFactory id=6065dd9e-ac96-32b9-a5f4-10109c224482
-2024-01-10 17:07:20,552 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
-2024-01-10 17:07:20,567 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
-2024-01-10 17:07:20,571 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-01-10 17:07:20,571 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-01-10 17:07:20,681 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-01-10 17:07:20,685 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3498 ms
-2024-01-10 17:07:21,156 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-10 17:07:21,268 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-10 17:07:21,337 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-01-10 17:07:21,629 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-10 17:07:21,673 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-01-10 17:07:23,052 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@243dd9b5
-2024-01-10 17:07:23,052 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-01-10 17:07:23,410 WARN o.h.d.Dialect [restartedMain] HHH000511: The 11.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2024-01-10 17:07:24,924 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-10 17:07:25,509 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-10 17:07:27,172 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-10 17:07:28,163 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] Loaded 1 resource(s) in the GraphQL schema.
-2024-01-10 17:07:28,447 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] GraphQL schema inspection:
+2024-01-10 18:10:45,611 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RsoApplication using Java 18.0.1.1 with PID 22088 (D:\delo\FRI\RSO-Project\RSO\target\classes started by matic in D:\delo\FRI\RSO-Project\RSO)
+2024-01-10 18:10:45,748 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "api"
+2024-01-10 18:10:45,788 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
+2024-01-10 18:10:45,788 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-10 18:10:45,789 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
+2024-01-10 18:10:45,790 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://52.226.106.6:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://52.226.106.6:8888/dropbox/default": Connect timed out. Will be trying the next url if available
+2024-01-10 18:10:45,790 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@64372b31 uris = array<String>['http://52.226.106.6:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://52.226.106.6:8888/dropbox/default": Connect timed out
+2024-01-10 18:10:45,791 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
+2024-01-10 18:10:45,791 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-10 18:10:45,791 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
+2024-01-10 18:10:45,792 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://52.226.106.6:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://52.226.106.6:8888/dropbox/api": Connect timed out. Will be trying the next url if available
+2024-01-10 18:10:45,792 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@2c69fb7a uris = array<String>['http://52.226.106.6:8888'], optional = true, profiles = 'api']): I/O error on GET request for "http://52.226.106.6:8888/dropbox/api": Connect timed out
+2024-01-10 18:10:45,793 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
+2024-01-10 18:10:45,793 INFO o.s.b.l.DeferredLog [restartedMain] Exception on Url - http://52.226.106.6:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://52.226.106.6:8888/dropbox/default": Connect timed out. Will be trying the next url if available
+2024-01-10 18:10:45,794 WARN o.s.b.l.DeferredLog [restartedMain] Could not locate PropertySource ([ConfigServerConfigDataResource@7e6dee2a uris = array<String>['http://52.226.106.6:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://52.226.106.6:8888/dropbox/default": Connect timed out
+2024-01-10 18:10:45,798 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-10 18:10:45,799 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-10 18:10:47,340 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 18:10:47,494 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interface.
+2024-01-10 18:10:47,876 INFO o.s.c.c.s.GenericScope [restartedMain] BeanFactory id=6065dd9e-ac96-32b9-a5f4-10109c224482
+2024-01-10 18:10:48,869 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-01-10 18:10:48,886 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-01-10 18:10:48,889 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-01-10 18:10:48,889 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-10 18:10:48,974 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-01-10 18:10:48,976 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3175 ms
+2024-01-10 18:10:49,474 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 18:10:49,588 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-10 18:10:49,652 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-01-10 18:10:49,978 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-10 18:10:50,010 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-01-10 18:10:51,907 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7906b611
+2024-01-10 18:10:51,909 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-01-10 18:10:52,238 WARN o.h.d.Dialect [restartedMain] HHH000511: The 11.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2024-01-10 18:10:53,587 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-10 18:10:54,166 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 18:10:55,684 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 18:10:56,623 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] Loaded 1 resource(s) in the GraphQL schema.
+2024-01-10 18:10:56,916 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] GraphQL schema inspection:
 	Unmapped fields: {User=[profile_path]}
 	Unmapped registrations: {}
 	Skipped types: []
-2024-01-10 17:07:28,484 INFO o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration [restartedMain] GraphQL endpoint HTTP POST /api/users/graphql
-2024-01-10 17:07:30,258 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-10 17:07:30,860 WARN o.s.b.d.a.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
-2024-01-10 17:07:31,958 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-10 17:07:31,993 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-01-10 17:07:32,081 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
-2024-01-10 17:07:32,093 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path ''
-2024-01-10 17:07:33,194 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-10 17:07:34,318 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-10 17:07:34,341 INFO o.s.b.StartupInfoLogger [restartedMain] Started RsoApplication in 20.769 seconds (process running for 21.925)
-2024-01-10 17:13:10,986 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-01-10 17:13:10,988 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-01-10 17:13:10,991 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
-2024-01-10 17:13:11,019 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-1] Received request from User API to /api/users/graphql
-2024-01-10 17:13:13,871 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-1] Entering (getUserByUsername)
-2024-01-10 17:13:13,872 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-1] Exiting (getUserByUsername)
-2024-01-10 17:13:15,008 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-1] Received request from User API to /api/users/graphql
-2024-01-10 17:13:15,028 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-1] Answered request to  User API
+2024-01-10 18:10:56,946 INFO o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration [restartedMain] GraphQL endpoint HTTP POST /api/users/graphql
+2024-01-10 18:10:58,691 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-10 18:10:59,203 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-01-10 18:11:00,319 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-10 18:11:00,347 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-01-10 18:11:00,411 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-01-10 18:11:00,426 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path ''
+2024-01-10 18:11:01,539 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-10 18:11:02,626 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-10 18:11:02,643 INFO o.s.b.StartupInfoLogger [restartedMain] Started RsoApplication in 51.202 seconds (process running for 52.327)
+2024-01-10 18:13:54,470 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 18:13:54,470 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-10 18:13:54,473 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-01-10 18:13:54,499 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-1] Received request from User API to /api/users/graphql
+2024-01-10 18:13:54,600 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-1] Entering (getUserByUsername)
+2024-01-10 18:13:54,601 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-1] Exiting (getUserByUsername)
+2024-01-10 18:13:55,080 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-1] Received request from User API to /api/users/graphql
+2024-01-10 18:13:55,093 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-1] Answered request to  User API
+2024-01-10 18:14:10,924 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-2] Received request from User API to /api/users/graphql
+2024-01-10 18:14:10,928 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-2] Entering (getUserByUsername)
+2024-01-10 18:14:10,929 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-2] Exiting (getUserByUsername)
+2024-01-10 18:14:11,207 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-2] Received request from User API to /api/users/graphql
+2024-01-10 18:14:11,208 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-2] Answered request to  User API
+2024-01-10 18:16:01,071 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-3] Received request from User API to /api/users/graphql
+2024-01-10 18:16:01,075 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-3] Entering (getUserByUsername)
+2024-01-10 18:16:01,075 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-3] Exiting (getUserByUsername)
+2024-01-10 18:16:01,350 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-3] Received request from User API to /api/users/graphql
+2024-01-10 18:16:01,352 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-3] Answered request to  User API
+2024-01-10 18:17:20,617 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-5] Received request from User API to /api/users/graphql
+2024-01-10 18:17:20,621 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-5] Entering (getUserByUsername)
+2024-01-10 18:17:20,621 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-5] Exiting (getUserByUsername)
+2024-01-10 18:17:20,878 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-5] Received request from User API to /api/users/graphql
+2024-01-10 18:17:20,879 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-5] Answered request to  User API
+2024-01-10 18:17:54,879 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-7] Received request from User API to /api/users/graphql
+2024-01-10 18:17:54,882 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-7] Entering (getUserByUsername)
+2024-01-10 18:17:54,882 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-7] Exiting (getUserByUsername)
+2024-01-10 18:17:55,140 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-7] Received request from User API to /api/users/graphql
+2024-01-10 18:17:55,141 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-7] Answered request to  User API
+2024-01-10 18:18:25,308 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-8] Received request from User API to /api/users/graphql
+2024-01-10 18:18:25,311 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-8] Entering (getUserByUsername)
+2024-01-10 18:18:25,311 INFO c.e.R.S.C.UserGraphQLController [http-nio-8082-exec-8] Exiting (getUserByUsername)
+2024-01-10 18:18:25,560 INFO c.e.R.L.InboundLoggingInterceptor [http-nio-8082-exec-8] Received request from User API to /api/users/graphql
+2024-01-10 18:18:25,561 INFO c.e.R.L.OutboundLoggingInterceptor [http-nio-8082-exec-8] Answered request to  User API

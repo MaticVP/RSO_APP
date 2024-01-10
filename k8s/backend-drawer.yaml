@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-editor
+  name: draw
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-editor
+      app: draw
   template:
     metadata:
       labels:
-        app: user-editor
+        app: draw
     spec:
       containers:
-        - image: pbsem2/new_image:latest
-          name: user-editor
-          imagePullPolicy: "Always"
+        - image: pbsem2/drawer_image:latest
+          name: draw
+          imagePullPolicy: Always
           env:
             - name: DBURI
               value: jdbc:postgresql://batyr.db.elephantsql.com:5432/obauputb
@@ -25,12 +25,12 @@ spec:
               #value: IyELRXpf5tGzTJhhojCSjUYFzXWOETNN
               valueFrom:
                 secretKeyRef:
-                  name: pg-pass
-                  key: password
+                    name: pg-pass
+                    key: password
             - name: CONFIGIP
               value: optional:configserver:http://52.226.106.6:8888/
           ports:
-            - containerPort: 8082
+            - containerPort: 8081
               name: server
 
 ---
@@ -38,15 +38,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: user-editor
+  name: draw
 spec:
   type: ClusterIP
   ports:
-    - port: 8082
+    - port: 8081
       protocol: TCP
       targetPort: server
   selector:
-    app: user-editor
+    app: draw
 
 
 

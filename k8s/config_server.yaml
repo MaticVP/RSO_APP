@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config
+  template:
+    metadata:
+      labels:
+        app: config
+    spec:
+      containers:
+        - image: pbsem2/config_image:latest
+          name: config
+          imagePullPolicy: "Always"
+          env:
+            - name: SPRING_CONFIG_URI
+              value: jdbc:postgresql://batyr.db.elephantsql.com:5432/obauputb
+            - name: SPRING_CONFIG_USERNAME
+              value: obauputb
+            - name: SPRING_CONFIG_PASSWORD
+              value: IyELRXpf5tGzTJhhojCSjUYFzXWOETNN
+          ports:
+            - containerPort: 8888
+              name: server
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: config
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8888
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: config
+
+
+
