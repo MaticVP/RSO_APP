@@ -1,12 +1,4 @@
 /* Drawer.css */
-
-.pageClass {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
   
   button {
     background-color: #3498db;

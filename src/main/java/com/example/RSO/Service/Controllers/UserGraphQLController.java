@@ -2,6 +2,8 @@ package com.example.RSO.Service.Controllers;
 
 import com.example.RSO.Service.Entity.User;
 import com.example.RSO.Service.Repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -17,12 +19,15 @@ import java.awt.print.Book;
 //@RequestMapping(path="api/users/graphql")
 public class UserGraphQLController {
 
+    Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
     private UserRepository userRepository;
 
     @QueryMapping
     public User getUserByUsername(@Argument String username) {
-
+        logger.info("Entering (getUserByUsername) DROPBOX API");
+        logger.info("Exiting (getUserByUsername) DROPBOX API");
         return userRepository.findByUsername(username);
+
     }
 }

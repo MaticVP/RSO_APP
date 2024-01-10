@@ -21,6 +21,7 @@ public class DropboxService {
     Logger logger = LoggerFactory.getLogger(DropboxService.class);
 
     public void uploadFile(InputStream fileInputStream, String fileName, String user_name) {
+        logger.info("Entering (uploadFile) DROPBOX API");
         try
         {
             dropboxClient.files().createFolderV2("/"+user_name);
@@ -36,9 +37,11 @@ public class DropboxService {
                 logger.error(e.toString());
             }
         }
+        logger.info("Exiting (uploadFile) DROPBOX API");
     }
 
     public byte[] getPhoto(String user_name) {
+        logger.info("Entering (getPhoto) DROPBOX API");
         try
         {
             dropboxClient.files().createFolderV2("/"+user_name);
@@ -59,6 +62,7 @@ public class DropboxService {
                 logger.error(e.toString());
             }
         }
+        logger.info("Exiting (getPhoto) DROPBOX API");
         return new byte[0];
     }
 
@@ -67,6 +71,7 @@ public class DropboxService {
     }
 
     public byte[] getImage(String user_name,String project_name) {
+        logger.info("Entering (getImage) DROPBOX API");
         try
         {
             dropboxClient.files().createFolderV2("/"+user_name);
@@ -87,10 +92,12 @@ public class DropboxService {
                 logger.error(e.toString());
             }
         }
+        logger.info("Exiting (getImage) DROPBOX API");
         return new byte[0];
     }
 
     public void saveImage(InputStream fileInputStream, String project_name, String user_name) {
+        logger.info("Entering (saveImage) DROPBOX API");
         try
         {
             dropboxClient.files().createFolderV2("/"+user_name);
@@ -106,9 +113,11 @@ public class DropboxService {
                 logger.error(e.toString());
             }
         }
+        logger.info("Exiting (saveImage) DROPBOX API");
     }
 
     public void createFolder(InputStream fileInputStream, String user_profile_path) {
+        logger.info("Entering (createFolder) DROPBOX API");
         try (InputStream in = fileInputStream) {
             if (dropboxClient != null) {
                 dropboxClient.files().createFolderV2("/"+user_profile_path);
@@ -117,6 +126,7 @@ public class DropboxService {
         } catch (Exception e) {
             logger.error(e.toString());
         }
+        logger.info("Exiting (createFolder) DROPBOX API");
     }
 
     // Add more methods for other Dropbox API functionalities as needed

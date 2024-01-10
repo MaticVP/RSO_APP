@@ -143,7 +143,7 @@ const DrawingBoard = () => {
   };
 
   return (
-    <div className="pageClass">
+    <div>
       <ColorPicker onColorChange={handleColorChange} />
       <StrokeWidthPicker strokeWidth={strokeWidth} onStrokeWidthChange={handleStrokeWidthChange} />
       <button onClick={toggleEraser}>{isErasing ? 'Exit Eraser' : 'Eraser'}</button>

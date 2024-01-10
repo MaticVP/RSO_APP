@@ -84,7 +84,6 @@ export default function Settings()
               <img src={imageData} alt="Fetched" />
               <Link to={"/profile"} state={{username:location.state.username}}>Home</Link>
               <Link to={"/projects"} state={{username:location.state.username}}>Projects</Link>
-              <Link to={"/drawing"} state={{username:location.state.username}}>Draw</Link>
               <Link to={"/settings"} state={{username:location.state.username}}>Settings</Link>
               <Link to={"/"} state={{username:location.state.username}}>Sign out</Link>
               <Link to={"/"}>Sign out</Link>
