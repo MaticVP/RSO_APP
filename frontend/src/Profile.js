@@ -30,7 +30,7 @@ function Profile() {
           throw new Error('Network response was not ok');
         }
 
-        const data = await response.json();
+        const data = await response.text();
 
         console.log('GET request successful:', data);
         setData(data)

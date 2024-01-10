@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import com.dropbox.core.v2.DbxClientV2;
@@ -201,6 +202,7 @@ public class UserController {
     @Operation(summary = "Deletes single user")
     @ApiResponse(responseCode = "200", description = "Successful removed user", content = @Content(schema = @Schema(implementation = AbstractReadWriteAccess.Item.class)))
     @DeleteMapping(path="/delete")
+    @Transactional
     public String deleteAllUsers(String username) {
         logger.info("Entering (deleteAllUsers)");
         userRepository.removeByUsername(username);

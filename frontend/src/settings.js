@@ -86,7 +86,6 @@ export default function Settings()
               <Link to={"/projects"} state={{username:location.state.username}}>Projects</Link>
               <Link to={"/settings"} state={{username:location.state.username}}>Settings</Link>
               <Link to={"/"} state={{username:location.state.username}}>Sign out</Link>
-              <Link to={"/"}>Sign out</Link>
               </nav>
           </div>
         <p>Profile image</p>

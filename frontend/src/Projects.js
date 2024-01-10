@@ -73,6 +73,11 @@ function Projects() {
     
       };
 
+      const handleDelete = async (e) => {
+        fetch('http://localhost:8081/api/draw/delete?project_name='+location.state.username+"&username="+location.state.username, { method: 'DELETE' })
+
+      }
+
   return (
     <div className="pageClass">
         <div className="nav-bar">
@@ -90,6 +95,7 @@ function Projects() {
                     <box-icon type='solid' name='project'></box-icon>
                 </div>
         <button type="submit" className="btn" onClick={handleRecover}>Start project</button>
+        <button type="submit" className="btn" onClick={handleDelete}>Delete project</button>
         <h2>Projects:</h2>
         <ul>
             {dataArray.map((item, index) => (

@@ -25,8 +25,8 @@ public class UserGraphQLController {
 
     @QueryMapping
     public User getUserByUsername(@Argument String username) {
-        logger.info("Entering (getUserByUsername) DROPBOX API");
-        logger.info("Exiting (getUserByUsername) DROPBOX API");
+        logger.info("Entering (getUserByUsername)");
+        logger.info("Exiting (getUserByUsername)");
         return userRepository.findByUsername(username);
 
     }
