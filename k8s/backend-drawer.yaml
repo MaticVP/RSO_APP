@@ -32,6 +32,18 @@ spec:
           ports:
             - containerPort: 8081
               name: server
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: server
+            initialDelaySeconds: 20
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: server
+            initialDelaySeconds: 20
+            periodSeconds: 3
 
 ---
 

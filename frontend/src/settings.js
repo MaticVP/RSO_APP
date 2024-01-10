@@ -60,7 +60,7 @@ export default function Settings()
         const ProfileData = new FormData();
         ProfileData.append('username', userName);
         ProfileData.append('password', password);
-        ProfileData.append('description', userName);
+        ProfileData.append('description', about);
 
 
         axios.post('/api/users/update-profile', ProfileData)

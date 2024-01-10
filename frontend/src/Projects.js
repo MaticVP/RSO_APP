@@ -74,7 +74,13 @@ function Projects() {
       };
 
       const handleDelete = async (e) => {
-        fetch('/api/draw/delete?project_name='+location.state.username+"&username="+location.state.username, { method: 'DELETE' })
+        
+        setProjectData({
+          ...Project,
+          project_name: e.target.value
+        });
+
+        fetch('/api/draw/delete?project_name='+Project.project_name+"&username="+location.state.username, { method: 'DELETE' })
         navigate("/projects",{state:{username:location.state.username}});
       }
 
