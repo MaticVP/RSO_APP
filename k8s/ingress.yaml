@@ -15,7 +15,7 @@ spec:
               service:
                 name: user-editor
                 port:
-                  number: 8082
+                  number: 8082            
     - http:
         paths:
           - path: /api/draw
