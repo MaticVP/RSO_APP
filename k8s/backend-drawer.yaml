@@ -34,13 +34,13 @@ spec:
               name: server
           livenessProbe:
             httpGet:
-              path: api/draw/actuator/health/liveness
+              path: api/draw/health/liveness
               port: server
             initialDelaySeconds: 20
             periodSeconds: 3
           readinessProbe:
             httpGet:
-              path: api/draw/actuator/health/readiness
+              path: api/draw/health/readiness
               port: server
             initialDelaySeconds: 20
             periodSeconds: 3

@@ -1,53 +1,49 @@
-2024-01-11 00:23:47,354 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RsoApplication using Java 18.0.1.1 with PID 17108 (D:\delo\FRI\RSO-Project\RSO\target\classes started by matic in D:\delo\FRI\RSO-Project\RSO)
-2024-01-11 00:23:47,507 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "api"
-2024-01-11 00:23:47,557 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
-2024-01-11 00:23:47,557 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
-2024-01-11 00:23:47,558 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
-2024-01-11 00:23:47,559 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
-2024-01-11 00:23:47,560 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
-2024-01-11 00:23:47,560 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
-2024-01-11 00:23:47,561 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
-2024-01-11 00:23:47,561 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
-2024-01-11 00:23:47,564 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-01-11 00:23:47,565 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-01-11 00:23:49,147 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-11 00:23:49,303 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
-2024-01-11 00:23:49,729 INFO o.s.c.c.s.GenericScope [restartedMain] BeanFactory id=6065dd9e-ac96-32b9-a5f4-10109c224482
-2024-01-11 00:23:50,844 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
-2024-01-11 00:23:50,861 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
-2024-01-11 00:23:50,864 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-01-11 00:23:50,865 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-01-11 00:23:50,961 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-01-11 00:23:50,963 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3395 ms
-2024-01-11 00:23:51,465 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-11 00:23:51,556 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-11 00:23:51,591 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-01-11 00:23:51,844 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-11 00:23:51,877 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-01-11 00:23:53,090 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5efdcbf4
-2024-01-11 00:23:53,092 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-01-11 00:23:53,384 WARN o.h.d.Dialect [restartedMain] HHH000511: The 11.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2024-01-11 00:23:54,536 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-11 00:23:55,054 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-11 00:23:56,314 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-11 00:23:57,088 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] Loaded 1 resource(s) in the GraphQL schema.
-2024-01-11 00:23:57,278 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] GraphQL schema inspection:
+2024-01-11 01:07:36,400 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RsoApplication using Java 18.0.1.1 with PID 27508 (D:\delo\FRI\RSO-Project\RSO\target\classes started by matic in D:\delo\FRI\RSO-Project\RSO)
+2024-01-11 01:07:36,570 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "api"
+2024-01-11 01:07:36,612 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
+2024-01-11 01:07:36,613 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-11 01:07:36,613 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
+2024-01-11 01:07:36,614 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[default], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-11 01:07:36,615 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://localhost:8888/
+2024-01-11 01:07:36,615 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-11 01:07:36,616 INFO o.s.b.l.DeferredLog [restartedMain] Fetching config from server at : http://52.226.106.6:8888
+2024-01-11 01:07:36,616 INFO o.s.b.l.DeferredLog [restartedMain] Located environment: name=dropbox, profiles=[api], label=null, version=11e1f654e516347cf3cab4d261e4f1d00b543061, state=null
+2024-01-11 01:07:36,620 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-11 01:07:36,622 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-11 01:07:38,395 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-11 01:07:38,574 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interface.
+2024-01-11 01:07:38,948 INFO o.s.c.c.s.GenericScope [restartedMain] BeanFactory id=6065dd9e-ac96-32b9-a5f4-10109c224482
+2024-01-11 01:07:39,961 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-01-11 01:07:39,977 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-01-11 01:07:39,979 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-01-11 01:07:39,980 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-11 01:07:40,070 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-01-11 01:07:40,072 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3448 ms
+2024-01-11 01:07:40,552 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-11 01:07:40,649 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-11 01:07:40,701 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-01-11 01:07:40,991 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-11 01:07:41,024 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-01-11 01:07:42,255 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11101a2
+2024-01-11 01:07:42,257 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-01-11 01:07:42,559 WARN o.h.d.Dialect [restartedMain] HHH000511: The 11.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2024-01-11 01:07:43,809 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-11 01:07:44,342 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-11 01:07:45,715 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-11 01:07:46,565 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] Loaded 1 resource(s) in the GraphQL schema.
+2024-01-11 01:07:46,775 INFO o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder [restartedMain] GraphQL schema inspection:
 	Unmapped fields: {User=[profile_path]}
 	Unmapped registrations: {}
 	Skipped types: []
-2024-01-11 00:23:57,302 INFO o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration [restartedMain] GraphQL endpoint HTTP POST /api/users/graphql
-2024-01-11 00:23:58,949 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-11 00:23:59,459 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-01-11 00:24:00,581 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-11 00:24:00,612 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 15 endpoint(s) beneath base path '/api/users'
-2024-01-11 00:24:00,679 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
-2024-01-11 00:24:00,691 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path ''
-2024-01-11 00:24:01,805 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-11 00:24:02,924 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
-2024-01-11 00:24:02,943 INFO o.s.b.StartupInfoLogger [restartedMain] Started RsoApplication in 22.219 seconds (process running for 23.38)
-2024-01-11 00:24:04,160 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-01-11 00:24:04,161 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-01-11 00:24:04,163 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
-2024-01-11 00:28:22,300 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-11 00:28:22,304 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-01-11 00:28:22,425 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-01-11 01:07:46,801 INFO o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration [restartedMain] GraphQL endpoint HTTP POST /api/users/graphql
+2024-01-11 01:07:48,424 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-11 01:07:48,874 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-01-11 01:07:49,993 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-11 01:07:50,036 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 15 endpoint(s) beneath base path '/api/users'
+2024-01-11 01:07:50,107 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-01-11 01:07:50,120 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path ''
+2024-01-11 01:07:51,237 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-11 01:07:52,350 INFO o.s.c.c.u.InetUtils [restartedMain] Cannot determine local hostname
+2024-01-11 01:07:52,373 INFO o.s.b.StartupInfoLogger [restartedMain] Started RsoApplication in 22.391 seconds (process running for 23.685)
+2024-01-11 01:25:36,325 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-11 01:25:36,329 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
